@@ -26,4 +26,6 @@ cd /vagrant
 sudo -u vagrant wget -q https://raw.githubusercontent.com/gordon-jin/vagrant/main/files/index.html 
 sudo -u vagrant wget -q https://raw.githubusercontent.com/gordon-jin/vagrant/main/files/info.php
 
+sudo setenforce 0
+
 service httpd restart 
