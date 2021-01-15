@@ -7,7 +7,8 @@ fix-etc-hosts() {
 
 	log "Fixing /etc/hosts records"
 	echo "" > /etc/hosts
-	sed -r '$ a \\n192.168.56.10 web-server \n192.168.56.20 db-server' -i /etc/hosts
+	echo "192.168.56.10 web-server" >> /etc/hosts
+	echo "192.168.56.20 db-server" >> /etc/hosts
 
 }
 
