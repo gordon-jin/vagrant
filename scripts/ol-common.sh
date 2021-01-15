@@ -6,7 +6,8 @@ setenforce 0
 fix-etc-hosts() {
 
 	log "Fixing /etc/hosts records"
-	sed -r '/127\.0\.1\.1/d; $ a \\n192.168.56.10 web-server \n192.168.56.20 db-server' -i /etc/hosts
+	echo "" > /etc/hosts
+	sed -r '$ a \\n192.168.56.10 web-server \n192.168.56.20 db-server' -i /etc/hosts
 
 }
 
